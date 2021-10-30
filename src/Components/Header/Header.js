@@ -2,7 +2,7 @@ import React from 'react';
 import './Header.css'
 import { Navbar,Container, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import LogIn from '../LogIn/LogIn';
+
 // import useFirebase from '../../hooks/useFirebase';
 
 
@@ -34,7 +34,7 @@ const Header = () => {
     </Nav>
   </Navbar.Collapse>
   <Navbar.Collapse className="justify-content-end">
-  <Link className='text-light nav-link p-4' to="/login"><LogIn></LogIn></Link>
+  <Link className='text-light nav-link p-4' to="/login">Sign In</Link>
       <Navbar.Text>
         {/* Signed in as: {user?.displayName} {user?.displayName && <Button>Log out</Button>} */}
       </Navbar.Text>
