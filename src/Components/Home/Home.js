@@ -1,33 +1,39 @@
 import React from 'react';
-import {Link} from 'react-router-dom'
-import { Navbar,Container } from 'react-bootstrap';
+import "./Home.css"
+import{ Button, Row} from 'react-bootstrap'
+import{  Link} from 'react-router-dom'
+
+// import useService from '../../hooks/useService';
+// import Service from '../Service/Service';
 
 const Home = () => {
-    return (
-        <>
-           <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-  <Container>
+//   const [services]=useService()
    
-      <img
-        src="https://image.freepik.com/free-vector/detailed-travel-logo_23-2148616611.jpg"
-        width="30"
-        height="30"
-        className="d-inline-block align-top"
-        alt="React Bootstrap logo"
-      />
-  <Navbar.Brand >World-tour</Navbar.Brand>
-  <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-  <Navbar.Collapse id="responsive-navbar-nav">
-  
-    
-         <Link className="light"   to='/home'>Home</Link>
-      <Link className="p-5 light" to='/service'>Services</Link>
-      
-    
-  </Navbar.Collapse>
-  </Container>
-</Navbar> 
-        </>
+    return (
+        <div>
+          <div className='banner p-5'>
+          <h1 className='text-right pt-5 text-success'>Wonderful Tour in Bangladesh </h1><br/>
+          <h3 className='text-danger'>3 Days , 4 Night Tour</h3>
+         <Link to='/service'> <Button  className="btn-danger  mt-3">Book Now</Button></Link>
+          <div className=' p-5 m-5 container text-center w-50 d-flex '>
+         
+            
+          </div>
+          
+        </div>
+        
+          <h1  className='text-success text-center mb-3'>Our Services</h1>
+          
+                
+                <Row xs={1} sm={2} md={3} lg={4}className="g-4">
+            {/* {
+                services.map(service=><Service
+
+                key={service.id}
+                service={service}></Service>)
+            } */}
+            </Row>
+        </div>
     );
 };
 
