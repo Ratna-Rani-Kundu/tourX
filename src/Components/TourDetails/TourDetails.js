@@ -3,7 +3,22 @@ import { Card, Col, Button} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const TourDetails = ({details}) => {
-    const {name,duration,price,img,_id}=details
+    const {name,duration,price,img}=details
+
+    // //delete user
+    // const handleDeleteUser=id=>{
+    //     const url=`https://chilling-zombie-19937.herokuapp.com/services/${id}`
+    //         fetch(url,{
+    //             method: "DELETE"
+    //         })
+    //         .then(res=>res.json())
+    //         .then(data=>{
+    //             if(data.deletedCount>0){
+    //                 alert('deleted successfully')
+    //                 const remainningServices=services.filter()
+    //             }
+    //         })
+    // }
     return (
         <>
             
@@ -20,9 +35,10 @@ const TourDetails = ({details}) => {
         </Card.Body>
         <Card.Footer  className="text-center">
          
-       <Link to={`/services/${_id}`}><Button  variant="primary">Place Booking</Button></Link> 
+       <Link to="/orderplaced"><Button  variant="primary">Place Booking</Button></Link> 
        <hr />
-       <Link to={`/services/${_id}`}><Button variant="primary">Delete Booking</Button></Link>
+       {/* <Button onClick={()=>handleDeleteUser(_id)} variant="primary">Delete Booking</Button>
+       <Link to={`/services/${_id}`}><Button onClick={()=>handleDeleteUser(_id)} variant="primary">Delete Booking</Button></Link> */}
     </Card.Footer>
       </Card>
     </Col>

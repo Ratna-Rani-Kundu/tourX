@@ -17,6 +17,7 @@ import BookNow from './Components/BookNow/BookNow';
 import LogIn from './Components/LogIn/LogIn';
 import AuthProvider from './context/AuthProvider';
  import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+import OrderPlaced from './Components/OrderPlaced/OrderPlaced';
 
 function App() {
   return (
@@ -40,9 +41,12 @@ function App() {
           <PrivateRoute exact path="/booking">
             <BookNow></BookNow>
           </PrivateRoute>
-          <PrivateRoute exact path="/about">
-            <About></About>
+          <PrivateRoute exact path="/orderplaced">
+          <OrderPlaced></OrderPlaced>
           </PrivateRoute>
+          <Route exact path="/about">
+            <About></About>
+          </Route>
           <Route exact path="/addService">
            <AddService></AddService>
           </Route>
