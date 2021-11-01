@@ -3,7 +3,7 @@ import { Card, Col, Button} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const Service = ({service}) => {
-    const {img,name,price,description}=service
+    const {img,name,price,description,_id}=service
     return (
         <>
             
@@ -16,13 +16,13 @@ const Service = ({service}) => {
           <Card.Text>
            Details: {description} 
            <br />
-           <h5>Price : {price} </h5>
+           Price : {price}
           </Card.Text>
          
         </Card.Body>
         <Card.Footer>
          
-       <Link to='/booking'><Button variant="primary">Book Now</Button></Link>
+       <Link to={`/services/${_id}`}><Button variant="primary">Book Now</Button></Link>
     </Card.Footer>
       </Card>
     </Col>

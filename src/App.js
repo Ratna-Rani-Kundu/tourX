@@ -13,7 +13,8 @@ import About from './Components/About/About';
 import LogIn from './Components/LogIn/LogIn';
 import Services from './Components/Services/Services';
 import AddService from './Components/AddService/AddService';
-import Booking from './Components/Booking/Booking';
+ import BookNow from './Components/BookNow/BookNow';
+
 function App() {
   return (
     <div >
@@ -26,22 +27,22 @@ function App() {
           <Route exact path="/home">
          <Home/>
           </Route>
-          <Route path="/services">
+          <Route exact path="/services">
            <Services></Services>
           </Route>
-          <Route path="/booking">
-           <Booking></Booking>
+          <Route path="/services/:id">
+            <BookNow></BookNow>
           </Route>
-          {/* <Route path="/services/:id'">
-           <Booking></Booking>
-          </Route> */}
-          <Route path="/about">
+          <Route exact path="/booking">
+            <BookNow></BookNow>
+          </Route>
+          <Route exact path="/about">
             <About></About>
           </Route>
-          <Route path="/addService">
+          <Route exact path="/addService">
            <AddService></AddService>
           </Route>
-          <Route path="/login">
+          <Route exact path="/login">
             <LogIn></LogIn>
           </Route>
           <Route path="*">
