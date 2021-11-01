@@ -13,13 +13,8 @@ const useFirebase = () => {
         signInWithPopup(auth,googoleProvider)
         .then(result=>{
            // The signed-in user info.
-        const {displayName,email,photoURL}=result.user
-        const logedInUser={
-            name:displayName,
-            email:email,
-            img:photoURL
-        }
-        setUser(logedInUser)
+        
+        setUser(result.user)
         })
         .catch(error=>{
             setError(error.massage)
