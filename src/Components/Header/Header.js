@@ -35,7 +35,7 @@ const Header = () => {
   </Navbar.Collapse>
   <Navbar.Collapse className="justify-content-end">
       <Navbar.Text>
-         {!user?.displayName?  <Button onClick={signInUsingGoogle}>Sign In</Button> : <div>Signed in as: {user?.displayName} <Button onClick={logout}>Log out</Button></div>
+         {!user?.displayName? <Link to='/login'>  <Button onClick={signInUsingGoogle}>Sign In</Button></Link> : <div>Signed in as: {user?.displayName} <Button onClick={logout}>Log out</Button></div>
          }
       </Navbar.Text>
     </Navbar.Collapse>

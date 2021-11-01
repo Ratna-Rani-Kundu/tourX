@@ -5,7 +5,7 @@ const BookNow = () => {
     const {id}=useParams();
     const [service,setService]=useState({})
     useEffect(()=>{
-        const url=`http://localhost:5000/services/${id}`
+        const url=`https://chilling-zombie-19937.herokuapp.com/services/${id}`
         fetch(url)
         .then(res=>res.json())
         .then(data=>console.log(data))

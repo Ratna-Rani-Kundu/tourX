@@ -14,6 +14,7 @@ import About from './Components/About/About';
 import Services from './Components/Services/Services';
 import AddService from './Components/AddService/AddService';
 import BookNow from './Components/BookNow/BookNow';
+import LogIn from './Components/LogIn/LogIn';
 
 function App() {
   return (
@@ -41,6 +42,9 @@ function App() {
           </Route>
           <Route exact path="/addService">
            <AddService></AddService>
+          </Route>
+          <Route exact path="/login">
+           <LogIn></LogIn>
           </Route>
           <Route path="*">
            <NotFound/>
