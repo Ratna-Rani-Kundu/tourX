@@ -15,10 +15,13 @@ import Services from './Components/Services/Services';
 import AddService from './Components/AddService/AddService';
 import BookNow from './Components/BookNow/BookNow';
 import LogIn from './Components/LogIn/LogIn';
+import AuthProvider from './context/AuthProvider';
+ import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
     <div >
+      <AuthProvider>
     <Router>
       <Header></Header>
      <Switch>
@@ -34,12 +37,12 @@ function App() {
           <Route path="/services/:id">
             <BookNow></BookNow>
           </Route>
-          <Route exact path="/booking">
+          <PrivateRoute exact path="/booking">
             <BookNow></BookNow>
-          </Route>
-          <Route exact path="/about">
+          </PrivateRoute>
+          <PrivateRoute exact path="/about">
             <About></About>
-          </Route>
+          </PrivateRoute>
           <Route exact path="/addService">
            <AddService></AddService>
           </Route>
@@ -52,6 +55,7 @@ function App() {
         </Switch>
         <Footer></Footer>
     </Router>
+    </AuthProvider>
     </div>
   );
 }

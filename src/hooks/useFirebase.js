@@ -13,7 +13,7 @@ const useFirebase = () => {
         signInWithPopup(auth,googoleProvider)
         .then(result=>{
            // The signed-in user info.
-        
+        console.log(result.user)
         setUser(result.user)
         })
         .catch(error=>{
